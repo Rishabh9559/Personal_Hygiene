@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post-Question Feedback</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <div class="max-w-screen-lg mx-auto py-10">
+        <!-- Header Section -->
+        <header class="flex justify-between items-center py-4">
+            <div class="text-xl font-bold">HygieneHub</div>
+            <nav>
+                <ul class="flex space-x-8">
+                    <li><a href="#" class="hover:underline">Home</a></li>
+                    <li><a href="#" class="hover:underline">Explore</a></li>
+                    <li><a href="#" class="hover:underline">Create</a></li>
+                    <li><a href="#" class="bg-gray-200 py-1 px-4 rounded-full hover:bg-gray-300">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Feedback Section -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h1 class="text-lg font-semibold mb-4">Thank You for Completing the Quiz!</h1>
+            <p class="mb-6">We would love to hear your feedback about the quiz and your experience with HygieneHub.</p>
+
+            <form>
+                <!-- Rating -->
+                <div class="mb-6">
+                    <label class="block text-sm font-medium mb-2">How would you rate the quiz?</label>
+                    <div class="flex items-center space-x-4">
+                        <label class="flex items-center space-x-2">
+                            <input type="radio" name="rating" value="1" class="form-radio text-yellow-400">
+                            <span>1</span>
+                        </label>
+                        <label class="flex items-center space-x-2">
+                            <input type="radio" name="rating" value="2" class="form-radio text-yellow-400">
+                            <span>2</span>
+                        </label>
+                        <label class="flex items-center space-x-2">
+                            <input type="radio" name="rating" value="3" class="form-radio text-yellow-400">
+                            <span>3</span>
+                        </label>
+                        <label class="flex items-center space-x-2">
+                            <input type="radio" name="rating" value="4" class="form-radio text-yellow-400">
+                            <span>4</span>
+                        </label>
+                        <label class="flex items-center space-x-2">
+                            <input type="radio" name="rating" value="5" class="form-radio text-yellow-400">
+                            <span>5</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Text Feedback -->
+                <div class="mb-6">
+                    <label for="feedback" class="block text-sm font-medium mb-2">Your Feedback</label>
+                    <textarea id="feedback" name="feedback" rows="4" class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Share your thoughts..."></textarea>
+                </div>
+
+                <!-- Email Input -->
+                <div class="mb-6">
+                    <label for="email" class="block text-sm font-medium mb-2">Your Email (optional)</label>
+                    <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg" placeholder="email@example.com">
+                </div>
+
+                <!-- Submit Button -->
+                <div class="flex justify-end">
+                    <button type="submit" class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600">Submit Feedback</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="mt-10 text-center text-sm text-gray-500">
+            <ul class="flex justify-center space-x-4 mb-4">
+                <li><a href="#" class="hover:underline">About</a></li>
+                <li><a href="#" class="hover:underline">Careers</a></li>
+                <li><a href="#" class="hover:underline">Press</a></li>
+                <li><a href="#" class="hover:underline">Blog</a></li>
+                <li><a href="#" class="hover:underline">Help</a></li>
+            </ul>
+            <ul class="flex justify-center space-x-4 mb-4">
+                <li><a href="#" class="hover:underline">Guidelines</a></li>
+                <li><a href="#" class="hover:underline">Terms</a></li>
+                <li><a href="#" class="hover:underline">Privacy</a></li>
+                <li><a href="#" class="hover:underline">Covid-19 Info</a></li>
+            </ul>
+            <p>© 2023 HygieneHub</p>
+            <ul class="flex justify-center space-x-4 mt-4">
+                <li><a href="#"><img src="path-to-facebook-icon" alt="Facebook"></a></li>
+                <li><a href="#"><img src="path-to-twitter-icon" alt="Twitter"></a></li>
+                <li><a href="#"><img src="path-to-instagram-icon" alt="Instagram"></a></li>
+                <li><a href="#"><img src="path-to-youtube-icon" alt="YouTube"></a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>

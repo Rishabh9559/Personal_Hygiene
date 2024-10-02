@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hygiene Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50">
+    
+    <div>
+        <button id="click">start</button>
+    </div>
+
+    <div>
+        <div id="quiz" style="display: none;" class="bg-white shadow-md rounded-lg p-6 ">
+            <div id="nextQuestion">
+
+                <h1 class="text-lg font-semibold mb-4">Question 1/10</h1>
+                <p class="text-gray-500 mb-4">Personal Hygiene Quiz</p>
+
+
+                <p class="font-medium mb-6">What is the most effective way to prevent the spread of germs?</p>
+
+                <form>
+                    <div class="mb-4">
+                        <label class="flex items-center space-x-2">
+                            <input type="radio" name="question" value="Washing hands frequently" class="form-radio text-blue-600">
+                            <span>Washing hands frequently</span>
+                        </label>
+                    </div>
+                    <div class="mb-4">
+                        <label class="flex items-center space-x-2">
+                            <input type="radio" name="question" value="Avoiding contact with others" class="form-radio text-blue-600">
+                            <span>Avoiding contact with others</span>
+                        </label>
+                    </div>
+                    <div class="mb-4">
+                        <label class="flex items-center space-x-2">
+                            <input type="radio" name="question" value="Wearing gloves all the time" class="form-radio text-blue-600">
+                            <span>Wearing gloves all the time</span>
+                        </label>
+                    </div>
+                    <div class="mb-4">
+                        <label class="flex items-center space-x-2">
+                            <input type="radio" name="question" value="Taking antibiotics" class="form-radio text-blue-600">
+                            <span>Taking antibiotics</span>
+                        </label>
+                    </div>
+            </div>
+
+            <div id="next" class="flex justify-end">
+                <button type="submit"
+                    class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600">Next</button>
+            </div>
+
+            </form>
+        </div>
+    </div>
+
+
+    <script src="quiz.js"></script>
+
+</body>
+
+</html>

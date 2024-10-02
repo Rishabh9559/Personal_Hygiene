@@ -1,0 +1,338 @@
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+  <link rel="stylesheet" as="style" onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Epilogue%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" />
+
+  <title>Personal Hygiene</title>
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+
+<body>
+  <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
+    style='font-family: Epilogue, "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+
+      <!-- header -->
+      <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f3f4] px-10 py-3">
+        <div class="flex items-center gap-4 text-[#111618]">
+          <div class="size-4">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z"
+                fill="currentColor"></path>
+            </svg>
+          </div>
+          <h2 class="text-[#111618] text-lg font-bold leading-tight tracking-[-0.015em]">Hygiene Hub</h2>
+        </div>
+        <div class="flex flex-1 justify-end gap-8">
+          <div class="flex items-center gap-9">
+            <a class="text-[#111618] text-sm font-medium leading-normal" href="#">Home</a>
+            <a class="text-[#111618] text-sm font-medium leading-normal" href="#">Tips</a>
+            <a class="text-[#111618] text-sm font-medium leading-normal" href="#">Video</a>
+            <a class="text-[#111618] text-sm font-medium leading-normal" href="#">About</a>
+
+          </div>
+          <button
+            class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#f0f3f4] text-[#111618] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+            <div class="text-[#111618]" data-icon="MagnifyingGlass" data-size="20px" data-weight="regular">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor"
+                viewBox="0 0 256 256">
+                <path
+                  d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z">
+                </path>
+              </svg>
+            </div>
+          </button>
+        </div>
+      </header>
+
+
+      <div class="px-40 flex flex-1 justify-center py-5">
+        <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+          <div class="@container">
+            <div class="@[480px]:p-4">
+              <div
+                class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10"
+                style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://cdn.usegalileo.ai/stability/4a9af824-d976-44b0-912d-21ea1522db12.png");'>
+                <div class="flex flex-col gap-2 text-left">
+                  <h1
+                    class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                    Welcome to Hygiene Hub
+                  </h1>
+                  <h2
+                    class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                    A place to learn about personal hygiene and share your experiences. Let's start with a quick quiz on
+                    your daily habits.
+                  </h2>
+                </div>
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#33b3e6] text-[#111618] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+                  <span class="truncate">Take the quiz</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- quiz -->
+          <div>
+            <div class="bg-white shadow-md rounded-lg p-6">
+              <h1 class="text-lg font-semibold mb-4">Question 1/10</h1>
+              <p class="text-gray-500 mb-4">Personal Hygiene Quiz</p>
+              <p class="font-medium mb-6">Which of the following is not a personal hygiene practice?</p>
+
+              <form>
+                <div class="mb-4">
+                  <label class="flex items-center space-x-2">
+                    <input type="radio" name="question" value="brushing" class="form-radio text-blue-600">
+                    <span>Brushing teeth</span>
+                  </label>
+                </div>
+                <div class="mb-4">
+                  <label class="flex items-center space-x-2">
+                    <input type="radio" name="question" value="washing" class="form-radio text-blue-600">
+                    <span>Washing hands</span>
+                  </label>
+                </div>
+                <div class="mb-4">
+                  <label class="flex items-center space-x-2">
+                    <input type="radio" name="question" value="bathing" class="form-radio text-blue-600">
+                    <span>Bathing regularly</span>
+                  </label>
+                </div>
+                <div class="mb-4">
+                  <label class="flex items-center space-x-2">
+                    <input type="radio" name="question" value="junk_food" class="form-radio text-blue-600">
+                    <span>Eating junk food</span>
+                  </label>
+                </div>
+
+                <div class="flex justify-end">
+                  <button type="submit"
+                    class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600">Next</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Tips -->
+          <h2 class="text-[#111618] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Today's tips
+          </h2>
+          <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+            <div class="flex flex-col gap-3 pb-3">
+              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("https://cdn.usegalileo.ai/sdxl10/40deb1a4-4d69-46bc-ba0d-3379f7124d4f.png");'>
+              </div>
+              <div>
+                <p class="text-[#111618] text-base font-medium leading-normal">How to wash your hands</p>
+                <p class="text-[#637d88] text-sm font-normal leading-normal">20k views · 2 days ago</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("https://cdn.usegalileo.ai/sdxl10/46305cd1-1fe3-40ae-9fa6-3ce33f254f3d.png");'>
+              </div>
+              <div>
+                <p class="text-[#111618] text-base font-medium leading-normal">How to wash your face</p>
+                <p class="text-[#637d88] text-sm font-normal leading-normal">10k views · 1 day ago</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("https://cdn.usegalileo.ai/sdxl10/66c9f8de-dd9e-4b29-89f3-a9a2374d203b.png");'>
+              </div>
+              <div>
+                <p class="text-[#111618] text-base font-medium leading-normal">How to brush your teeth</p>
+                <p class="text-[#637d88] text-sm font-normal leading-normal">15k views · 3 days ago</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("https://cdn.usegalileo.ai/stability/b2c5293e-047d-4a61-ba7f-b65fab7866e9.png");'>
+              </div>
+              <div>
+                <p class="text-[#111618] text-base font-medium leading-normal">How to do laundry</p>
+                <p class="text-[#637d88] text-sm font-normal leading-normal">18k views · 4 days ago</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("https://cdn.usegalileo.ai/sdxl10/57dd5228-8e78-4452-bcde-f35906065964.png");'>
+              </div>
+              <div>
+                <p class="text-[#111618] text-base font-medium leading-normal">How to use a public restroom</p>
+                <p class="text-[#637d88] text-sm font-normal leading-normal">25k views · 5 days ago</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+            <div class="flex flex-col gap-3 pb-3">
+              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("https://cdn.usegalileo.ai/stability/4c46947e-330e-4cbb-9e3f-ae86ac6e9242.png");'>
+              </div>
+              <div>
+                <p class="text-[#111618] text-base font-medium leading-normal">How to clean your toothbrush</p>
+                <p class="text-[#637d88] text-sm font-normal leading-normal">2 min read</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("https://cdn.usegalileo.ai/stability/9b3784b1-5a9f-4d9a-be4a-800ef3610817.png");'>
+              </div>
+              <div>
+                <p class="text-[#111618] text-base font-medium leading-normal">When and how to clean your phone</p>
+                <p class="text-[#637d88] text-sm font-normal leading-normal">1 min read</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-3 pb-3">
+              <div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+                style='background-image: url("https://cdn.usegalileo.ai/stability/fbba5d8d-68e4-4371-a09a-8f7680bff61e.png");'>
+              </div>
+              <div>
+                <p class="text-[#111618] text-base font-medium leading-normal">How to prevent maskne</p>
+                <p class="text-[#637d88] text-sm font-normal leading-normal">3 min read</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- videos -->
+          <h2 class="text-[#111618] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Featured
+            videos</h2>
+          <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+            <div class="bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-4 aspect-video"
+              style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0.1) 100%, rgba(0, 0, 0, 0) 100%), url("https://cdn.usegalileo.ai/sdxl10/72732d11-a163-4470-997f-4cbe48d17129.png");'>
+              <p class="text-white text-base font-bold leading-tight w-4/5 line-clamp-2">Morning routine for clear skin
+              </p>
+            </div>
+            <div class="bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-4 aspect-video"
+              style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0.1) 100%, rgba(0, 0, 0, 0) 100%), url("https://cdn.usegalileo.ai/stability/c308bafa-4548-4ed4-b53b-ed3f35262c0e.png");'>
+              <p class="text-white text-base font-bold leading-tight w-4/5 line-clamp-2">5-minute bathroom declutter</p>
+            </div>
+          </div>
+
+
+          <!-- About us -->
+
+          <div>
+            <div class="layout-content-container flex flex-col max-w-[920px] flex-1">
+              <h2 class="text-[#111618] text-[25px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">About
+              </h2>
+              <div class="flex flex-wrap justify-between gap-2 p-4">
+                <p class="text-[#111618] tracking-light text-[32px] font-bold leading-tight min-w-72">Personal hygiene
+                  benefits</p>
+              </div>
+              <p class="text-[#111618] text-justify font-normal leading-normal pb-3 pt-1 px-4">
+                Good personal hygiene is important for physical and mental health. It helps prevent infections and
+                illnesses and can improve your overall well-being. Good personal
+                hygiene also has social and psychological benefits. It can help you feel good about yourself and have a
+                positive self-image. This can be especially important during
+                adolescence when body image can become a major concern. Maintaining good personal hygiene can also help
+                you avoid embarrassing situations, such as bad breath or body
+                odor. Here are some of the key benefits of good personal hygiene:
+              </p>
+              <h2 class="text-[#111618] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Prevents
+                Illness</h2>
+              <p class="text-[#111618] text-justify font-normal leading-normal pb-3 pt-1 px-4">
+                Good personal hygiene can help prevent illnesses caused by bacteria and viruses. Washing your hands
+                frequently can help reduce your risk of getting sick. It can also
+                help prevent the spread of germs to others. Bathing regularly can help remove dirt, sweat, and dead skin
+                cells, which can harbor bacteria and cause infections.
+                Brushing and flossing your teeth can help prevent cavities, gum disease, and bad breath. Keeping your
+                living environment clean can help prevent infestations of pests,
+                such as mice and cockroaches, which can spread diseases. Good personal hygiene can also help prevent
+                infections of the skin, nails, and hair.
+              </p>
+              <h2 class="text-[#111618] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Promotes
+                Social Acceptance</h2>
+              <p class="text-[#111618] text-justify font-normal leading-normal pb-3 pt-1 px-4">
+                Good personal hygiene can help you feel more confident and comfortable in social situations. It can also
+                help you avoid negative reactions from others. For example,
+                people may be more likely to avoid close contact with someone who has bad breath or body odor. Good
+                personal hygiene can also help you make a good impression on
+                others. This is especially important in professional and romantic relationships. Maintaining good
+                personal hygiene can show that you care about your health and
+                appearance. It can also demonstrate respect for others by not subjecting them to unpleasant odors or
+                unsanitary conditions. Good personal hygiene can help you feel
+                more confident and comfortable in social situations. It can also help you avoid negative reactions from
+                others. For example, people may be more likely to avoid close
+                contact with someone who has bad breath or body odor. Good personal hygiene can also help you make a
+                good impression on others. This is especially important in
+                professional and romantic relationships. Maintaining good personal hygiene can show that you care about
+                your health and appearance. It can also demonstrate respect
+                for others by not subjecting them to unpleasant odors or unsanitary conditions.
+              </p>
+              <h2 class="text-[#111618] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Boosts
+                Self-Esteem</h2>
+              <p class="text-[#111618] text-justify font-normal leading-normal pb-3 pt-1 px-4">
+                Good personal hygiene can help you feel better about yourself. It can help reduce feelings of shame,
+                guilt, and embarrassment related to your appearance and body
+                odor. This can be especially important if you have a health condition that affects your personal
+                hygiene. For example, people with incontinence, acne, or obesity may
+                face challenges related to cleanliness and grooming. Good personal hygiene can also help you feel more
+                in control of your life. It can give you a sense of
+                accomplishment and self-respect. Taking time to care for your body can be a form of self-care and
+                self-love. This can help boost your mood and reduce stress. Good
+                personal hygiene can also help you feel more comfortable and confident in your interactions with others.
+                For example, you may be more likely to express affection,
+                engage in intimacy, and participate in physical activities.
+              </p>
+              <h2 class="text-[#111618] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">How to
+                Maintain Good Personal Hygiene</h2>
+              <p class="text-[#111618] text-justify font-normal leading-normal pb-3 pt-1 px-4">
+                Here are some tips for maintaining good personal hygiene: Bathe or shower daily, Wash your hands before
+                eating and after using the bathroom, Brush and floss your
+                teeth at least twice a day, Wear clean clothes and undergarments, Keep your living environment clean and
+                free of clutter, Use deodorant or antiperspirant to control
+                body odor, Trim your nails and keep them clean, Shave or groom body hair as desired, Change sanitary
+                products regularly during menstruation, Seek medical treatment
+                for skin, nail, or hair conditions, Good personal hygiene is an important part of your daily routine. It
+                involves taking care of your body, clothing, and living
+                environment. Good personal hygiene can help you stay healthy, feel confident, and make a positive
+                impression on others. It can also have social, emotional, and
+                psychological benefits. If you have concerns about your personal hygiene or need assistance with
+                self-care, talk to a healthcare professional or trusted individual.
+              </p>
+              <h2 class="text-[#111618] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Good personal hygiene</h2>
+              <p class="text-[#111618] text-justify font-normal leading-normal pb-3 pt-1 px-4">
+                Good personal hygiene is important for your health, appearance, and well-being. It can help prevent
+                infections, promote social acceptance, and boost self-esteem.
+                Maintaining good personal hygiene involves regular habits and practices, such as bathing, handwashing,
+                and oral care. It also includes grooming, clothing, and
+                cleanliness of your living environment. Good personal hygiene can have physical, emotional, and social
+                benefits. If you have questions or concerns about your personal
+                hygiene, seek guidance from a healthcare professional or trusted individual.
+              </p>
+            </div>
+          </div>
+
+<!-- futter -->
+          <div class="@container">
+            <div class="flex flex-col justify-end gap-6 px-4 py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20">
+              <div class="flex flex-col gap-2 text-center">
+                <h1
+                  class="text-[#111618] tracking-light text-[32px] text-center font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
+                  Join the conversation
+                </h1>
+                <p class="text-[#111618] text-center font-normal leading-normal max-w-[720px">Share your hygiene tips with us.</p>
+              </div>
+              <div class="flex flex-1 justify-center">
+                <div class="flex justify-center">
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#33b3e6] text-[#111618] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow">
+                    <span class="truncate">Post Tips</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
