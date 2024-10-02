@@ -91,10 +91,16 @@ let next = document.getElementById("next");
 let nextQuestion = document.getElementById("nextQuestion");
 let click = document.getElementById("click");
 let quiz = document.getElementById("quiz");
+let resultTag=document.getElementById("result");
 
 click.addEventListener("click", () => {
   quiz.style.display = "";
 });
+
+click.addEventListener("dblclick",(e)=>{
+  e.preventDefault();
+  window.location.reload();
+})
 
 let i = 1;
 let selectedAnswer = [];
@@ -135,9 +141,16 @@ function loadQuestion(index) {
     `;
 
     nextQuestion.innerHTML = html;
-  } else {
+  } 
+  if(index==11) {
     nextQuestion.innerHTML = "<h1 class='text-lg font-semibold mb-4'>Quiz Completed!</h1>";
-    next.innerHTML = `<button type="submit" class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600">Submit</button>`;
+    next.innerHTML = `<button type="submit"  class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600">Submit</button>`;
+
+  }
+  if(index==12){
+    
+      calculate(selectedAnswer,answer)
+      
     
   }
 }
@@ -145,7 +158,6 @@ function loadQuestion(index) {
 next.addEventListener("click", (e) => {
   e.preventDefault(); // Prevent form submission behavior
 
-  // Capture the selected answer before proceeding to the next question
   let selected = document.querySelector('input[name="question"]:checked');
   if (selected) {
     selectedAnswer.push(selected.value);
@@ -154,93 +166,53 @@ next.addEventListener("click", (e) => {
     selectedAnswer.push(null);
   }
 
-  // Move to the next question
+
   i++;
   loadQuestion(i);
 
-  console.log(selectedAnswer); // Display selected answers in the console
-});
+  console.log(selectedAnswer); 
 
-// Initial load of the first question
-// loadQuestion(i);
-
-
-
-
-/* 
-let next = document.getElementById("next");
-let nextQuestion = document.getElementById("nextQuestion");
-let click = document.getElementById("click");
-let quiz=document.getElementById("quiz");
-const radioButtons = document.querySelectorAll('input[name="question"]');
-click.addEventListener("click",()=>{
-  quiz.style.display="";
-});
-
-let i = 1;
-next.addEventListener("click", (a) => {
-  i++;
-  if (i < 11) {
-    let html = `
-   
-    <h1 class="text-lg font-semibold mb-4">Question ${i}/10</h1>
-    <p class="text-gray-500 mb-4">Personal Hygiene Quiz</p>      
-       <p class="font-medium mb-6">${question[i][1]}</p>
-    
-       <form>
-           <div class="mb-4">
-               <label class="flex items-center space-x-2">
-                   <input type="radio" name="question" value="${question[i][2]}" class="form-radio text-blue-600">
-                   <span>${question[i][2]} </span>
-               </label>
-           </div>
-           <div class="mb-4">
-               <label class="flex items-center space-x-2">
-                   <input type="radio" name="question" value="${question[i][3]}" class="form-radio text-blue-600">
-                   <span>${question[i][3]}</span>
-               </label>
-           </div>
-           <div class="mb-4">
-               <label class="flex items-center space-x-2">
-                   <input type="radio" name="question" value="${question[i][4]}" class="form-radio text-blue-600">
-                   <span>${question[i][4]}</span>
-               </label>
-           </div>
-           <div class="mb-4">
-               <label class="flex items-center space-x-2">
-                   <input type="radio" name="question" value="${question[i][5]}" class="form-radio text-blue-600">
-                   <span>${question[i][5]}</span>
-               </label>
-           </div>
-        
-    `;
-    
-    nextQuestion.innerHTML = html;
-  }
   
-  else {
-    let submit = `  <button type="submit" 
-                    class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600">Submit</button>`;
-    next.innerHTML = submit;
-  }
+
 });
 
 
 
-let selectedAnswer=[];
+function calculate(selectedAnswer,answer){
+let result=0;
+let k=0;
+let a=1;
+while (k<10) {
+  if(selectedAnswer[k]==answer[a]){
+    result++;
+    console.log("incre="+result);
+    console.log(selectedAnswer[k]+" answer = "+answer[a]);
+  }
+  k++;
+  a++;
+}
 
-next.addEventListener("click", () => {
-    for (const radioButton of radioButtons) {
-        if (radioButton.checked) {
-            selectedAnswer.push(radioButton.value);
-            
-          }
-        }
-       
-    
-   
-        console.log(selectedAnswer);
-      });
-      
+// show answer
 
-      */
+function showResult(result){
+  quiz.style.display="none";
+  if(result>8){
+    resultTag.innerHTML=` <h1 class='text-lg font-semibold mb-4 text-lime-300 '>Excellent</h1>`
+    console.log(result);
+  }
+  if(result<8 && result>5){
+    resultTag.innerHTML=` <h1 class='text-lg font-semibold mb-4 text-yellow-300' >Good</h1>`
+    console.log(result);
+
+  }
+  if(result<=5){
+    resultTag.innerHTML=` <h1 class='text-lg font-semibold mb-4 text-red-500' >Poor</h1>`
+    console.log(result);
+
+  }
+}
+
+showResult(result);
+
+}
+

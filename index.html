@@ -71,14 +71,14 @@
                 </div>
                 <button
                   class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#33b3e6] text-[#111618] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
-                  <span class="truncate">Take the quiz</span>
+                  <span id="click" class="truncate">Take the quiz</span>
                 </button>
               </div>
             </div>
           </div>
 
           <!-- quiz -->
-          <div>
+          <!-- <div>
             <div class="bg-white shadow-md rounded-lg p-6">
               <h1 class="text-lg font-semibold mb-4">Question 1/10</h1>
               <p class="text-gray-500 mb-4">Personal Hygiene Quiz</p>
@@ -116,8 +116,62 @@
                 </div>
               </form>
             </div>
-          </div>
+          </div> -->
+          <div>
+            <div class="bg-white shadow-md rounded-lg p-6 ">
+              <div id="quiz" style="display: none;">
+                <div id="nextQuestion">
 
+                  <h1 class="text-lg font-semibold mb-4">Question 1/10</h1>
+                  <p class="text-gray-500 mb-4">Personal Hygiene Quiz</p>
+
+
+                  <p class="font-medium mb-6">What is the most effective way to prevent the spread of germs?</p>
+
+                  <form>
+                    <div class="mb-4">
+                      <label class="flex items-center space-x-2">
+                        <input type="radio" name="question" value="Washing hands frequently"
+                          class="form-radio text-blue-600">
+                        <span>Washing hands frequently</span>
+                      </label>
+                    </div>
+                    <div class="mb-4">
+                      <label class="flex items-center space-x-2">
+                        <input type="radio" name="question" value="Avoiding contact with others"
+                          class="form-radio text-blue-600">
+                        <span>Avoiding contact with others</span>
+                      </label>
+                    </div>
+                    <div class="mb-4">
+                      <label class="flex items-center space-x-2">
+                        <input type="radio" name="question" value="Wearing gloves all the time"
+                          class="form-radio text-blue-600">
+                        <span>Wearing gloves all the time</span>
+                      </label>
+                    </div>
+                    <div class="mb-4">
+                      <label class="flex items-center space-x-2">
+                        <input type="radio" name="question" value="Taking antibiotics" class="form-radio text-blue-600">
+                        <span>Taking antibiotics</span>
+                      </label>
+                    </div>
+                </div>
+
+                <div id="next" class="flex justify-end">
+                  <button type="submit"
+                    class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600">Next</button>
+                </div>
+
+                </form>
+              </div>
+
+              <div id="result">
+
+              </div>
+            </div>
+
+          </div>
           <!-- Tips -->
           <h2 class="text-[#111618] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Today's tips
           </h2>
@@ -296,7 +350,8 @@
                 psychological benefits. If you have concerns about your personal hygiene or need assistance with
                 self-care, talk to a healthcare professional or trusted individual.
               </p>
-              <h2 class="text-[#111618] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Good personal hygiene</h2>
+              <h2 class="text-[#111618] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Good
+                personal hygiene</h2>
               <p class="text-[#111618] text-justify font-normal leading-normal pb-3 pt-1 px-4">
                 Good personal hygiene is important for your health, appearance, and well-being. It can help prevent
                 infections, promote social acceptance, and boost self-esteem.
@@ -309,7 +364,7 @@
             </div>
           </div>
 
-<!-- futter -->
+          <!-- futter -->
           <div class="@container">
             <div class="flex flex-col justify-end gap-6 px-4 py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20">
               <div class="flex flex-col gap-2 text-center">
@@ -317,7 +372,8 @@
                   class="text-[#111618] tracking-light text-[32px] text-center font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
                   Join the conversation
                 </h1>
-                <p class="text-[#111618] text-center font-normal leading-normal max-w-[720px">Share your hygiene tips with us.</p>
+                <p class="text-[#111618] text-center font-normal leading-normal max-w-[720px">Share your hygiene tips
+                  with us.</p>
               </div>
               <div class="flex flex-1 justify-center">
                 <div class="flex justify-center">
@@ -333,6 +389,8 @@
       </div>
     </div>
   </div>
+
+  <script src="quiz.js"></script>
 </body>
 
 </html>
