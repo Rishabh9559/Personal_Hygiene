@@ -216,3 +216,44 @@ showResult(result);
 
 }
 
+
+//  post form
+
+let post=document.getElementById("post");
+
+post.addEventListener("click",(e)=>{
+  e.preventDefault();
+  post.innerHTML=`
+          <div  >
+            <h1 class="text-lg font-semibold mb-4">Thank You !</h1>
+
+            <form>
+          
+
+             
+                <div class="mb-6">
+                    <label for="feedback" class="block text-sm font-medium mb-2">Share Your Tips</label>
+                    <textarea id="feedback" name="feedback" rows="4" class="w-full p-3 border border-gray-300 rounded-lg" placeholder="Share your thoughts..."></textarea>
+                </div>
+
+              
+                <div class="mb-6">
+                    <label for="email" class="block text-sm font-medium mb-2">Your Email (optional)</label>
+                    <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg" placeholder="email@example.com">
+                </div>
+
+                <!-- Submit Button -->
+                <div id="postSubmit" class="flex justify-end">
+                    <button type="submit" class=" bg-[#33b3e6] text-[#111618] text-sm font-bold  py-2 px-6 rounded-full  ">Submit</button>
+                </div>
+            </form>
+        </div>
+  `;
+ 
+  let postSubmit=document.getElementById("postSubmit");
+  postSubmit.addEventListener("click",(e)=>{
+    e.preventDefault()
+    window.location.reload();
+  })
+
+})
