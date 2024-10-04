@@ -84,23 +84,20 @@ let answer = {
   10: "Showering regularly and using deodorant",
 };
 
-
-
-
 let next = document.getElementById("next");
 let nextQuestion = document.getElementById("nextQuestion");
 let click = document.getElementById("click");
 let quiz = document.getElementById("quiz");
-let resultTag=document.getElementById("result");
+let resultTag = document.getElementById("result");
 
 click.addEventListener("click", () => {
   quiz.style.display = "";
 });
 
-click.addEventListener("dblclick",(e)=>{
+click.addEventListener("dblclick", (e) => {
   e.preventDefault();
   window.location.reload();
-})
+});
 
 let i = 1;
 let selectedAnswer = [];
@@ -141,17 +138,14 @@ function loadQuestion(index) {
     `;
 
     nextQuestion.innerHTML = html;
-  } 
-  if(index==11) {
-    nextQuestion.innerHTML = "<h1 class='text-lg font-semibold mb-4'>Quiz Completed!</h1>";
-    next.innerHTML = `<button type="submit"  class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600">Submit</button>`;
-
   }
-  if(index==12){
-    
-      calculate(selectedAnswer,answer)
-      
-    
+  if (index == 11) {
+    nextQuestion.innerHTML =
+      "<h1 class='text-lg font-semibold mb-4'>Quiz Completed!</h1>";
+    next.innerHTML = `<button type="submit"  class="bg-blue-500 text-white py-2 px-6 rounded-full hover:bg-blue-600">Submit</button>`;
+  }
+  if (index == 12) {
+    calculate(selectedAnswer, answer);
   }
 }
 
@@ -161,70 +155,60 @@ next.addEventListener("click", (e) => {
   let selected = document.querySelector('input[name="question"]:checked');
   if (selected) {
     selectedAnswer.push(selected.value);
-  }
-  else{
+  } else {
     selectedAnswer.push(null);
   }
-
 
   i++;
   loadQuestion(i);
 
-  console.log(selectedAnswer); 
-
-  
-
+  console.log(selectedAnswer);
 });
 
-
-
-function calculate(selectedAnswer,answer){
-let result=0;
-let k=0;
-let a=1;
-while (k<10) {
-  if(selectedAnswer[k]==answer[a]){
-    result++;
-    console.log("incre="+result);
-    console.log(selectedAnswer[k]+" answer = "+answer[a]);
+function calculate(selectedAnswer, answer) {
+  let result = 0;
+  let k = 0;
+  let a = 1;
+  while (k < 10) {
+    if (selectedAnswer[k] == answer[a]) {
+      result++;
+      console.log("incre=" + result);
+      console.log(selectedAnswer[k] + " answer = " + answer[a]);
+    }
+    k++;
+    a++;
   }
-  k++;
-  a++;
+
+  // show answer
+
+  function showResult(result) {
+    quiz.style.display = "none";
+    if (result > 8) {
+      resultTag.innerHTML = ` <h1 class='text-lg font-semibold mb-4 text-lime-300 '>Excellent</h1>`;
+      console.log(result);
+    }
+    if (result < 8 && result > 5) {
+      resultTag.innerHTML = ` <h1 class='text-lg font-semibold mb-4 text-yellow-300' >Good</h1>`;
+      console.log(result);
+    }
+    if (result <= 5) {
+      resultTag.innerHTML = ` <h1 class='text-lg font-semibold mb-4 text-red-500' >Poor</h1>`;
+      console.log(result);
+    }
+  }
+
+  showResult(result);
 }
-
-// show answer
-
-function showResult(result){
-  quiz.style.display="none";
-  if(result>8){
-    resultTag.innerHTML=` <h1 class='text-lg font-semibold mb-4 text-lime-300 '>Excellent</h1>`
-    console.log(result);
-  }
-  if(result<8 && result>5){
-    resultTag.innerHTML=` <h1 class='text-lg font-semibold mb-4 text-yellow-300' >Good</h1>`
-    console.log(result);
-
-  }
-  if(result<=5){
-    resultTag.innerHTML=` <h1 class='text-lg font-semibold mb-4 text-red-500' >Poor</h1>`
-    console.log(result);
-
-  }
-}
-
-showResult(result);
-
-}
-
 
 //  post form
 
-let post=document.getElementById("post");
-
-post.addEventListener("click",(e)=>{
+let Tipspost = document.getElementById("Tipspost");
+let show = document.querySelector(".show");
+Tipspost.addEventListener("click", (e) => {
   e.preventDefault();
-  post.innerHTML=`
-          <div  >
+  Tipspost.style.display = "none";
+  show.innerHTML = `
+          
             <h1 class="text-lg font-semibold mb-4">Thank You !</h1>
 
             <form>
@@ -247,13 +231,12 @@ post.addEventListener("click",(e)=>{
                     <button type="submit" class=" bg-[#33b3e6] text-[#111618] text-sm font-bold  py-2 px-6 rounded-full  ">Submit</button>
                 </div>
             </form>
-        </div>
+    
   `;
- 
-  let postSubmit=document.getElementById("postSubmit");
-  postSubmit.addEventListener("click",(e)=>{
-    e.preventDefault()
-    window.location.reload();
-  })
 
-})
+  let postSubmit = document.getElementById("postSubmit");
+  postSubmit.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.reload();
+  });
+});
