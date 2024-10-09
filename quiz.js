@@ -150,7 +150,7 @@ function loadQuestion(index) {
 }
 
 next.addEventListener("click", (e) => {
-  e.preventDefault(); // Prevent form submission behavior
+  e.preventDefault();
 
   let selected = document.querySelector('input[name="question"]:checked');
   if (selected) {
